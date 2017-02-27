@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-
 }
 
 body {
@@ -107,4 +106,39 @@ body {
     top: 10px;
     left: 10px;
     z-index: 2;
+}
+
+
+/* icon */
+
+.icon-rain{
+
+}
+
+.icon-clouds{
+
+}
+
+.icon-clear{
+
+}
+
+.icon-snow{
+
+}
+
+.icon-home{
+    display: block;
+    width: 64px;
+    height: 32px;
+    background: url("../image/weather.png") no-repeat center;
+    margin: 0 auto;
+}
+
+.icon-about{
+    display: block;
+    width: 64px;
+    height: 32px;
+    background: url("../image/info.png") no-repeat center;
+    margin: 0 auto;
 }
