@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Ubuntu, sans-serif;
+    background-color: #191a46;
+    color: #aaa;
+}
+
+/* Interface */
+
+.header{
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #11a7ab;
+}
+
+.nav{
+    position: absolute;
+    bottom: 0; right: 0; left: 0;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #4f597b;
+    overflow: hidden;
+}
+
+.view{
+    position: absolute;
+    top:60px; right:0; bottom:60px; left:0;
+    overflow: hidden;
+}
+
+.nav a {
+    display: block;
+    width:50%;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    transition-duration: 0.5s;
+}
+.nav a:first-child{
+    border-right: 1px solid #1f253d;
+}
+
+.active{
+    border-top: 3px solid #11a7ab;
+}
+
+.nav a i {
+    margin-top: 15px;
+}
+
+.panel{
+    position: absolute;
+    top:0; left: 0; right: 0; bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    transition-duration: 1s;
+}
+
+.panel-padding{
+    padding: 25px;
+}
+
+.left{
+    transform: translate3D(-100%, 0, 0);
+}
+
+.center{
+    transform: translate3D(0, 0, 0);
+}
+
+.right{
+    transform: translate3D(100%, 0, 0);
+}
+
+.loader{
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0; left: 0;
+    opacity: 0.5;
+    background-image: url('../image/loader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.row_active{
+    display: block;
+    width: 100%;
+    background-color: #A72F2B;
+}
+
+.back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
