@@ -132,19 +132,31 @@ body {
 /* icon */
 
 .icon-rain{
-
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url("../image/rain.png") no-repeat center;
 }
 
 .icon-clouds{
-
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url("../image/cloud.png") no-repeat center;
 }
 
 .icon-clear{
-
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url("../image/clear.png") no-repeat center;
 }
 
 .icon-snow{
-
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url("../image/snow.png") no-repeat center;
 }
 
 .icon-home{
