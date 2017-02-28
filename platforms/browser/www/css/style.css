@@ -35,6 +35,7 @@ body {
 .view{
     position: absolute;
     top:60px; right:0; bottom:60px; left:0;
+    overflow: hidden;
 }
 
 .nav a {
@@ -98,7 +99,7 @@ body {
 .row_active{
     display: block;
     width: 100%;
-    background-color: red;
+    background-color: #A72F2B;
 }
 
 .back{

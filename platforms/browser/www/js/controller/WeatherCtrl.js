@@ -1,14 +1,11 @@
-function WeatherCtrl($scope, $http){
+function WeatherCtrl($scope, $http, GeolocationService){
 
     $scope.panel = 0;
 
     $scope.search = function(){
         var url="http://api.openweathermap.org/data/2.5/forecast/daily?q=" + $scope.city +"&mode=json&cnt=10&units=metric&APPID=29c40f0944c926eab4d44dd6827a444e";
         $scope.loader = true;
-        $http.get(url).success(httpSuccess).error(function(){
-            $scope.loader = false;
-            alert('Impossible de récupérer les informations');
-        });
+        $http.get(url).success(httpSuccess).error(httpError);
     }
 
     $scope.expand = function (e) {
@@ -17,7 +14,18 @@ function WeatherCtrl($scope, $http){
     }
 
     $scope.geolocate = function () {
-        
+        GeolocationService.getCurrentPosition(function (position) {
+            $scope.loader = true;
+            $http.get('http://api.openweathermap.org/data/2.5/forecast/daily?lat='+ position.coords.latitude +'&lon='+ position.coords.longitude +'&mode=json&cnt=10&units=metric&APPID=29c40f0944c926eab4d44dd6827a444e')
+                .success(httpSuccess).error(httpError);
+        }, function () {
+            alert('Impossible de récupérer votre position');
+        })
+    }
+
+    httpError = function(){
+        $scope.loader = false;
+        alert('Impossible de récupérer les informations');
     }
 
     httpSuccess = function(response){
@@ -26,6 +34,5 @@ function WeatherCtrl($scope, $http){
         $scope.weather = response;
     }
 
-    $scope.city = 'Montpellier';
     $scope.Math = Math;
 }
