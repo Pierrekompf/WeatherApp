@@ -88,23 +88,49 @@ body {
     width: 100%;
     height: 100%;
     top:0; left: 0;
-    opacity: 0.5;
     background-image: url('../image/loader.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.row_active{
-    display: block;
+.row-title{
     width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: larger;
+}
+
+.row{
+    width: 100%;
+    height: 90px;
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
+    position: relative;
+}
+
+.date{
+    position: absolute;
+    top:45%;
+    left:10%;
+}
+
+.temperature{
+    position: absolute;
+    left: 50%;
+    top : 45%;
+}
+
+.row_active{
     background-color: #A72F2B;
 }
 
 .back{
     position: absolute;
-    top: 10px;
-    left: 10px;
+    padding: 10px;
+    background-color: #4B946A;
+    color: white;
     z-index: 2;
 }
 
@@ -130,6 +156,12 @@ body {
 
 
 /* icon */
+
+.icon {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
 
 .icon-rain{
     display: block;
