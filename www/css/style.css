@@ -108,6 +108,26 @@ body {
     z-index: 2;
 }
 
+.submit{
+    background-color: #0f7c80;
+    border: hidden;
+    color: #FFFFFF;
+    width: 85%;
+    padding-top: 5%; padding-bottom: 5%;
+    position: absolute;
+}
+
+.btn{
+    /*padding-left: 30%; padding-right: 30%; */
+    width: 85%;
+    text-align: center;
+    padding-top: 5%; padding-bottom: 5%;
+    position : absolute;
+    top : 50%;
+    background-color: #A72F2B;
+    color: #FFFFFF;
+}
+
 
 /* icon */
 

@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-
 }
 
 body {
@@ -35,6 +34,7 @@ body {
 .view{
     position: absolute;
     top:60px; right:0; bottom:60px; left:0;
+    overflow: hidden;
 }
 
 .nav a {
@@ -98,7 +98,7 @@ body {
 .row_active{
     display: block;
     width: 100%;
-    background-color: red;
+    background-color: #A72F2B;
 }
 
 .back{
@@ -106,4 +106,59 @@ body {
     top: 10px;
     left: 10px;
     z-index: 2;
+}
+
+.submit{
+    background-color: #0f7c80;
+    border: hidden;
+    color: #FFFFFF;
+    width: 85%;
+    padding-top: 5%; padding-bottom: 5%;
+    position: absolute;
+}
+
+.btn{
+    /*padding-left: 30%; padding-right: 30%; */
+    width: 85%;
+    text-align: center;
+    padding-top: 5%; padding-bottom: 5%;
+    position : absolute;
+    top : 50%;
+    background-color: #A72F2B;
+    color: #FFFFFF;
+}
+
+
+/* icon */
+
+.icon-rain{
+
+}
+
+.icon-clouds{
+
+}
+
+.icon-clear{
+
+}
+
+.icon-snow{
+
+}
+
+.icon-home{
+    display: block;
+    width: 64px;
+    height: 32px;
+    background: url("../image/weather.png") no-repeat center;
+    margin: 0 auto;
+}
+
+.icon-about{
+    display: block;
+    width: 64px;
+    height: 32px;
+    background: url("../image/info.png") no-repeat center;
+    margin: 0 auto;
 }
