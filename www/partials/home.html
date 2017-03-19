@@ -4,16 +4,19 @@
     <div class="loader" ng-show="loader"></div>
 
     <section class="panel panel-padding" ng-class="{center:panel==0, left:panel>0}">
-        <p>Bienvenue, vous pouvez chercher la météo dans une ville particulière, ou utiliser votre position actuelle.</p>
-        <form ng-submit="search()">
-            <p>
-                <input type="text" class="text" placeholder="Rechercher une ville" ng-model="city">
-            </p>
-            <p>
-                <a class="btn" ng-click="geolocate()">Ma position</a>
-                <input type="submit" class="submit" value="Rechercher">
-            </p>
-        </form>
+        <div class="form">
+            <p>Bienvenue, vous pouvez chercher la météo dans une ville particulière, ou utiliser votre
+            position actuelle.</p>
+            <form ng-submit="search()">
+                <p>
+                    <input type="text" class="text" placeholder="Rechercher une ville" ng-model="city">
+                </p>
+                <p>
+                    <a class="btn" ng-click="geolocate()">Ma position</a>
+                    <input type="submit" class="submit" value="Rechercher">
+                </p>
+            </form>
+        </div>
 
     </section>
 

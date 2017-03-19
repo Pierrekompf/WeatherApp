@@ -23,6 +23,16 @@ function WeatherCtrl($scope, $http, GeolocationService){
         })
     }
 
+    $scope.geolocatePrecise = function () {
+        GeolocationService.getCurrentPosition(function (position) {
+            $scope.loader = true;
+            $http.get('http://api.openweathermap.org/data/2.5/weather?lat='+ position.coords.latitude +'&lon='+ position.coords.longitude +'&mode=json&cnt=10&units=metric&APPID=29c40f0944c926eab4d44dd6827a444e')
+                .success(httpSuccess).error(httpError);
+        }, function () {
+            alert('Impossible de récupérer votre position');
+        })
+    }
+
     httpError = function(){
         $scope.loader = false;
         alert('Impossible de récupérer les informations');
@@ -35,4 +45,8 @@ function WeatherCtrl($scope, $http, GeolocationService){
     }
 
     $scope.Math = Math;
+
+    $scope.init = function () {
+        $scope.geolocatePrecise();
+    }
 }

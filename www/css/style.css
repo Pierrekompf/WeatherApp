@@ -100,13 +100,14 @@ body {
     line-height: 100px;
     text-align: center;
     font-size: larger;
+    border-bottom: solid 1px white;
+
 }
 
 .row{
     width: 100%;
     height: 90px;
     border-bottom: solid 1px white;
-    border-top: solid 1px white;
     position: relative;
 }
 
@@ -158,7 +159,9 @@ body {
 /* icon */
 
 .icon {
-    float: right;
+    position: absolute;
+    top : 5%;
+    left: 70%;
     margin-right: 20px;
     margin-top: 10px;
 }
