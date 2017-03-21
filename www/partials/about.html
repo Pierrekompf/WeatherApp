@@ -1,16 +1,17 @@
 <section class="panel panel-padding" ng-controller="WeatherCtrl" ng-init="init()">
-    <div class="row-title">
+    <div class="ligne-title_about">
         {{weather.name}} / {{weather.sys.country}}
     </div>
-    <div class="row">
-        <div class="date">
+    <div class="ligne_about">
+        <div class="date_about">
             <strong>{{weather.dt*1000 | date:'EEE'}}</strong>
             {{weather.dt*1000 | date:'dd/MM'}}
         </div>
-        <div class="temperature">{{Math.round(weather.main.temp)}}°C</div>
-        <i class="icon icon-{{weather.weather.0.main.toLowerCase()}}"></i>
+        <div class="temperature_about">{{Math.round(weather.main.temp)}}°C</div>
+
         <div class="pression">Pression : {{weather.main.pressure}} Pa</div>
         <div class="humidite">Humidité : {{weather.main.humidity}}%</div>
         <div class="vent">Vitesse du vent : {{weather.wind.speed}} m/s</div>
     </div>
+    <i class="icon_about icon-{{weather.weather.0.main.toLowerCase()}}"></i>
 </section>
