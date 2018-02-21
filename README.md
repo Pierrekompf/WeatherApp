@@ -1,14 +1,11 @@
-# A Blank PhoneGap App
+# WeatherApp
 
-## Usage
+## An initiation
 
-### PhoneGap CLI
+    Small application made in angular js on phonegap to initiate me to these technologies
 
-    $ phonegap create my-app --template blank
-
-### Desktop
+### Link
 
 In your browser, open the file:
 
-    /www/index.html
-
+    /www/weatherapp/www/#/home
